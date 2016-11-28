@@ -1,0 +1,78 @@
+fangpin@fangpin-OptiPlex-9020:~/project/clcaffe$ cmake -DUSE_GREENTEA=ON -DUSE_INTEL_SPATIAL=ON -DUSE_ISAAC=ON -CPU_ONLY=OFF .
+loading initial cache file PU_ONLY=OFF
+CMake Error: Error processing file: PU_ONLY=OFF
+-- Boost version: 1.54.0
+-- Found the following Boost libraries:
+--   system
+--   thread
+--   filesystem
+-- Found gflags  (include: /usr/include, library: /usr/lib/x86_64-linux-gnu/libgflags.so)
+-- Found glog    (include: /usr/include, library: /usr/lib/x86_64-linux-gnu/libglog.so)
+-- Found PROTOBUF Compiler: /usr/bin/protoc
+-- Found lmdb    (include: /usr/include, library: /usr/lib/x86_64-linux-gnu/liblmdb.so)
+-- Found LevelDB (include: /usr/include, library: /usr/lib/x86_64-linux-gnu/libleveldb.so)
+-- Found Snappy  (include: /usr/include, library: /usr/lib/libsnappy.so)
+CMake Warning at cmake/Dependencies.cmake:65 (message):
+  -- CUDA is not detected by cmake.  Building without it...
+Call Stack (most recent call first):
+  CMakeLists.txt:40 (include)
+
+
+-- OpenCV found (/usr/local/share/OpenCV)
+-- Found Atlas (include: /usr/include, library: /usr/lib/libatlas.so)
+-- NumPy ver. 1.11.2 found (include: /usr/local/lib/python2.7/dist-packages/numpy/core/include)
+-- Boost version: 1.54.0
+-- Found the following Boost libraries:
+--   python
+-- Could NOT find Doxygen (missing:  DOXYGEN_EXECUTABLE) 
+-- 
+-- ******************* Caffe Configuration Summary *******************
+-- General:
+--   Version           :   <TODO> (Caffe doesn't declare its version in headers)
+--   Git               :   rc2-760-g8e0823c-dirty
+--   System            :   Linux
+--   C++ compiler      :   /usr/bin/c++
+--   Release CXX flags :   -O3 -DNDEBUG -fPIC -Wall -Wno-sign-compare -Wno-uninitialized
+--   Debug CXX flags   :   -g -fPIC -Wall -Wno-sign-compare -Wno-uninitialized
+--   Build type        :   Release
+-- 
+--   BUILD_SHARED_LIBS :   ON
+--   BUILD_python      :   ON
+--   BUILD_matlab      :   OFF
+--   BUILD_docs        :   ON
+--   CPU_ONLY          :   ON
+--   USE_OCL          :    OFF
+--   USE_FFT          :    OFF
+--   USE_OPENCV        :   ON
+--   USE_LEVELDB       :   ON
+--   USE_LMDB          :   ON
+--   ALLOW_LMDB_NOLOCK :   OFF
+-- 
+-- Dependencies:
+--   BLAS              :   Yes (Atlas)
+--   Boost             :   Yes (ver. 1.54)
+--   glog              :   Yes
+--   gflags            :   Yes
+--   protobuf          :   Yes (ver. 2.5.0)
+--   lmdb              :   Yes (ver. 0.9.10)
+--   LevelDB           :   Yes (ver. 1.15)
+--   Snappy            :   Yes (ver. 1.1.0)
+--   OpenCV            :   Yes (ver. 2.4.13)
+--   CUDA              :   No
+-- 
+-- Python:
+--   Interpreter       :   /usr/bin/python2.7 (ver. 2.7.6)
+--   Libraries         :   /usr/lib/x86_64-linux-gnu/libpython2.7.so (ver 2.7.6)
+--   NumPy             :   /usr/local/lib/python2.7/dist-packages/numpy/core/include (ver 1.11.2)
+-- 
+-- Documentaion:
+--   Doxygen           :   No
+--   config_file       :   
+-- 
+-- Install:
+--   Install path      :   /home/fangpin/project/clcaffe/install
+-- 
+-- Configuring incomplete, errors occurred!
+See also "/home/fangpin/project/clcaffe/CMakeFiles/CMakeOutput.log".
+See also "/home/fangpin/project/clcaffe/CMakeFiles/CMakeError.log".
+

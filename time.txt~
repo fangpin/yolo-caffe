@@ -1,0 +1,43 @@
+yolo
+
+# caffe opencl default INTEL_SPATIAL
+
+
+# caffe cpu
+353.063 ms
+
+# darknet cpu
+596.021 ms
+
+
+
+
+# train_lenet opencl
+real	15m43.855s
+user	5m16.184s
+sys	4m32.868s
+
+
+
+
+# train_lenet cpu
+real	11m27.137s
+user	11m32.952s
+sys	0m1.188s
+
+
+
+
+# test_lenet cpu
+real	0m3.817s
+user	0m3.852s
+sys	0m0.044s
+
+
+
+# test_lenet opencl
+real	0m3.474s
+user	0m2.448s
+sys	0m0.128s
+
+
