@@ -12,7 +12,6 @@ layer {
   type: "Convolution"
   bottom: "data"
   top: "conv1"
-  engine: INTEL_SPATIAL
   convolution_param {
     num_output: 64
     kernel_size: 7
@@ -25,7 +24,6 @@ layer {
   type: "ReLU"
   bottom: "conv1"
   top: "conv1"
-  engine: INTEL_SPATIAL
   relu_param{
     negative_slope: 0.1
   }		
@@ -35,7 +33,6 @@ layer {
   type: "Pooling"
   bottom: "conv1"
   top: "pool1"
-  engine: INTEL_SPATIAL
   pooling_param {
     pool: MAX
     kernel_size: 2
@@ -48,7 +45,6 @@ layer{
   type: "Convolution"
   bottom: "pool1"
   top: "conv2"
-  engine: INTEL_SPATIAL
   convolution_param {
     num_output: 192
     kernel_size: 3
@@ -61,7 +57,6 @@ layer {
   type: "ReLU"
   bottom: "conv2"
   top: "conv2"
-  engine: INTEL_SPATIAL
   relu_param{
     negative_slope: 0.1
   }		
@@ -71,7 +66,6 @@ layer {
   type: "Pooling"
   bottom: "conv2"
   top: "pool2"
-  engine: INTEL_SPATIAL
   pooling_param {
     pool: MAX
     kernel_size: 2
@@ -84,7 +78,6 @@ layer{
   type: "Convolution"
   bottom: "pool2"
   top: "conv3"
-  engine: INTEL_SPATIAL
   convolution_param {
     num_output: 128
     kernel_size: 1
@@ -97,7 +90,6 @@ layer {
   type: "ReLU"
   bottom: "conv3"
   top: "conv3"
-  engine: INTEL_SPATIAL
   relu_param{
     negative_slope: 0.1
   }		
@@ -109,7 +101,6 @@ layer{
   type: "Convolution"
   bottom: "conv3"
   top: "conv4"
-  engine: INTEL_SPATIAL
   convolution_param {
     num_output: 256
     kernel_size: 3
@@ -122,7 +113,6 @@ layer {
   type: "ReLU"
   bottom: "conv4"
   top: "conv4"
-  engine: INTEL_SPATIAL
   relu_param{
     negative_slope: 0.1
   }		
@@ -145,7 +135,6 @@ layer {
   type: "ReLU"
   bottom: "conv5"
   top: "conv5"
-  engine: INTEL_SPATIAL
   relu_param{
     negative_slope: 0.1
   }		
@@ -156,7 +145,6 @@ layer{
   type: "Convolution"
   bottom: "conv5"
   top: "conv6"
-  engine: INTEL_SPATIAL
   convolution_param {
     num_output: 512
     kernel_size: 3
@@ -169,7 +157,6 @@ layer {
   type: "ReLU"
   bottom: "conv6"
   top: "conv6"
-  engine: INTEL_SPATIAL
   relu_param{
     negative_slope: 0.1
   }		
@@ -179,7 +166,6 @@ layer {
   type: "Pooling"
   bottom: "conv6"
   top: "pool6"
-  engine: INTEL_SPATIAL
   pooling_param {
     pool: MAX
     kernel_size: 2
@@ -192,7 +178,6 @@ layer{
   type: "Convolution"
   bottom: "pool6"
   top: "conv7"
-  engine: INTEL_SPATIAL
   convolution_param {
     num_output: 256
     kernel_size: 1
@@ -205,7 +190,6 @@ layer {
   type: "ReLU"
   bottom: "conv7"
   top: "conv7"
-  engine: INTEL_SPATIAL
   relu_param{
     negative_slope: 0.1
   }		
@@ -216,7 +200,6 @@ layer{
   type: "Convolution"
   bottom: "conv7"
   top: "conv8"
-  engine: INTEL_SPATIAL
   convolution_param {
     num_output: 512
     kernel_size: 3
@@ -229,7 +212,6 @@ layer {
   type: "ReLU"
   bottom: "conv8"
   top: "conv8"
-  engine: INTEL_SPATIAL
   relu_param{
     negative_slope: 0.1
   }		
@@ -240,7 +222,6 @@ layer{
   type: "Convolution"
   bottom: "conv8"
   top: "conv9"
-  engine: INTEL_SPATIAL
   convolution_param {
     num_output: 256
     kernel_size: 1
@@ -253,7 +234,6 @@ layer {
   type: "ReLU"
   bottom: "conv9"
   top: "conv9"
-  engine: INTEL_SPATIAL
   relu_param{
     negative_slope: 0.1
   }		
@@ -264,7 +244,6 @@ layer{
   type: "Convolution"
   bottom: "conv9"
   top: "conv10"
-  engine: INTEL_SPATIAL
   convolution_param {
     num_output: 512
     kernel_size: 3
@@ -276,7 +255,6 @@ layer {
   name: "relu10"
   type: "ReLU"
   bottom: "conv10"
-engine: INTEL_SPATIAL
   top: "conv10"
   relu_param{
     negative_slope: 0.1
@@ -288,7 +266,6 @@ layer{
   type: "Convolution"
   bottom: "conv10"
   top: "conv11"
-engine: INTEL_SPATIAL
   convolution_param {
     num_output: 256
     kernel_size: 1
@@ -301,7 +278,6 @@ layer {
   type: "ReLU"
   bottom: "conv11"
   top: "conv11"
-engine: INTEL_SPATIAL
   relu_param{
     negative_slope: 0.1
   }		
@@ -313,7 +289,6 @@ layer{
   type: "Convolution"
   bottom: "conv11"
   top: "conv12"
-engine: INTEL_SPATIAL
   convolution_param {
     num_output: 512
     kernel_size: 3
@@ -326,7 +301,6 @@ layer {
   type: "ReLU"
   bottom: "conv12"
   top: "conv12"
-engine: INTEL_SPATIAL
   relu_param{
     negative_slope: 0.1
   }		
@@ -338,7 +312,6 @@ layer{
   type: "Convolution"
   bottom: "conv12"
   top: "conv13"
-engine: INTEL_SPATIAL
   convolution_param {
     num_output: 256
     kernel_size: 1
@@ -351,7 +324,6 @@ layer {
   type: "ReLU"
   bottom: "conv13"
   top: "conv13"
-engine: INTEL_SPATIAL
   relu_param{
     negative_slope: 0.1
   }		
@@ -362,7 +334,6 @@ layer{
   type: "Convolution"
   bottom: "conv13"
   top: "conv14"
-  engine: INTEL_SPATIAL
   convolution_param {
     num_output: 512
     kernel_size: 3
@@ -375,7 +346,6 @@ layer {
   type: "ReLU"
   bottom: "conv14"
   top: "conv14"
-engine: INTEL_SPATIAL
   relu_param{
     negative_slope: 0.1
   }		
@@ -386,7 +356,6 @@ layer{
   type: "Convolution"
   bottom: "conv14"
   top: "conv15"
-engine: INTEL_SPATIAL
   convolution_param {
     num_output: 512
     kernel_size: 1
@@ -399,7 +368,6 @@ layer {
   type: "ReLU"
   bottom: "conv15"
   top: "conv15"
-  engine: INTEL_SPATIAL
   relu_param{
     negative_slope: 0.1
   }		
@@ -411,7 +379,6 @@ layer{
   type: "Convolution"
   bottom: "conv15"
   top: "conv16"
-engine: INTEL_SPATIAL
   convolution_param {
     num_output: 1024
     kernel_size: 3
@@ -424,7 +391,6 @@ layer {
   type: "ReLU"
   bottom: "conv16"
   top: "conv16"
-engine: INTEL_SPATIAL
   relu_param{
     negative_slope: 0.1
   }		
@@ -435,7 +401,6 @@ layer {
   type: "Pooling"
   bottom: "conv16"
   top: "pool16"
-engine: INTEL_SPATIAL
   pooling_param {
     pool: MAX
     kernel_size: 2
@@ -449,7 +414,6 @@ layer{
   type: "Convolution"
   bottom: "pool16"
   top: "conv17"
-engine: INTEL_SPATIAL
   convolution_param {
     num_output: 512
     kernel_size: 1
@@ -462,7 +426,6 @@ layer {
   type: "ReLU"
   bottom: "conv17"
   top: "conv17"
-engine: INTEL_SPATIAL
   relu_param{
     negative_slope: 0.1
   }		
@@ -474,7 +437,6 @@ layer{
   type: "Convolution"
   bottom: "conv17"
   top: "conv18"
-engine: INTEL_SPATIAL
   convolution_param {
     num_output: 1024
     kernel_size: 3
@@ -487,7 +449,6 @@ layer {
   type: "ReLU"
   bottom: "conv18"
   top: "conv18"
-engine: INTEL_SPATIAL
   relu_param{
     negative_slope: 0.1
   }		
@@ -500,7 +461,6 @@ layer{
   type: "Convolution"
   bottom: "conv18"
   top: "conv19"
-engine: INTEL_SPATIAL
   convolution_param {
     num_output: 512
     kernel_size: 1
@@ -513,7 +473,6 @@ layer {
   type: "ReLU"
   bottom: "conv19"
   top: "conv19"
-engine: INTEL_SPATIAL
   relu_param{
     negative_slope: 0.1
   }		
@@ -526,7 +485,6 @@ layer{
   type: "Convolution"
   bottom: "conv19"
   top: "conv20"
-engine: INTEL_SPATIAL
   convolution_param {
     num_output: 1024
     kernel_size: 3
@@ -539,7 +497,6 @@ layer {
   type: "ReLU"
   bottom: "conv20"
   top: "conv20"
-engine: INTEL_SPATIAL
   relu_param{
     negative_slope: 0.1
   }		
@@ -552,7 +509,6 @@ layer{
   type: "Convolution"
   bottom: "conv20"
   top: "conv21"
-engine: INTEL_SPATIAL
   convolution_param {
     num_output: 1024
     kernel_size: 3
@@ -576,7 +532,6 @@ layer{
   type: "Convolution"
   bottom: "conv21"
   top: "conv22"
-engine: INTEL_SPATIAL
   convolution_param {
     num_output: 1024
     kernel_size: 3
@@ -589,7 +544,6 @@ layer {
   type: "ReLU"
   bottom: "conv22"
   top: "conv22"
-engine: INTEL_SPATIAL
   relu_param{
     negative_slope: 0.1
   }		
@@ -602,7 +556,6 @@ layer{
   type: "Convolution"
   bottom: "conv22"
   top: "conv23"
-engine: INTEL_SPATIAL
   convolution_param {
     num_output: 1024
     kernel_size: 3
@@ -615,7 +568,6 @@ layer {
   type: "ReLU"
   bottom: "conv23"
   top: "conv23"
-engine: INTEL_SPATIAL
   relu_param{
     negative_slope: 0.1
   }		
@@ -627,7 +579,6 @@ layer{
   type: "Convolution"
   bottom: "conv23"
   top: "conv24"
-engine: INTEL_SPATIAL
   convolution_param {
     num_output: 1024
     kernel_size: 3
@@ -639,7 +590,6 @@ layer {
   name: "relu24"
   type: "ReLU"
   bottom: "conv24"
-engine: INTEL_SPATIAL
   top: "conv24"
   relu_param{
     negative_slope: 0.1
@@ -653,7 +603,6 @@ layer{
   name: "fc25"
   type: "InnerProduct"
   bottom: "conv24"
-engine: INTEL_SPATIAL
   top: "fc25"
   inner_product_param {
     num_output: 4096
@@ -664,7 +613,6 @@ layer {
   type: "ReLU"
   bottom: "fc25"
   top: "fc25"
-engine: INTEL_SPATIAL
   relu_param{
     negative_slope: 0.1
   }		
@@ -676,7 +624,6 @@ layer{
   type: "InnerProduct"
   bottom: "fc25"
   top: "result"
-engine: INTEL_SPATIAL
   inner_product_param {
     num_output: 1470
   }

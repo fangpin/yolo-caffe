@@ -1,20 +1,17 @@
 import caffe
-#GPU_ID = 0 # Switch between 0 and 1 depending on the GPU you want to use.
+GPU_ID = 0 # Switch between 0 and 1 depending on the GPU you want to use.
 caffe.set_mode_gpu()
-#caffe.set_device(GPU_ID)
-#caffe.set_mode_cpu()
+caffe.set_device(GPU_ID)
+# caffe.set_mode_cpu()
 from datetime import datetime
 import numpy as np
 import sys, getopt
 import cv2
 
-
-
-# 1475
 def interpret_output(output, img_width, img_height):
 	classes = ["aeroplane", "bicycle", "bird", "boat", "bottle", "bus", "car", "cat", "chair", "cow", "diningtable", "dog", "horse", "motorbike", "person", "pottedplant", "sheep", "sofa", "train","tvmonitor"]
-        w_img = img_width
-        h_img = img_height
+	w_img = img_width
+	h_img = img_height
 	print w_img, h_img
 	threshold = 0.2
 	iou_threshold = 0.5
@@ -34,7 +31,7 @@ def interpret_output(output, img_width, img_height):
 	boxes[:,:,:,0:2] = boxes[:,:,:,0:2] / 7.0
 	boxes[:,:,:,2] = np.multiply(boxes[:,:,:,2],boxes[:,:,:,2])
 	boxes[:,:,:,3] = np.multiply(boxes[:,:,:,3],boxes[:,:,:,3])
-
+		
 	boxes[:,:,:,0] *= w_img
 	boxes[:,:,:,1] *= h_img
 	boxes[:,:,:,2] *= w_img
@@ -47,7 +44,7 @@ def interpret_output(output, img_width, img_height):
 	filter_mat_boxes = np.nonzero(filter_mat_probs)
 	boxes_filtered = boxes[filter_mat_boxes[0],filter_mat_boxes[1],filter_mat_boxes[2]]
 	probs_filtered = probs[filter_mat_probs]
-	classes_num_filtered = np.argmax(filter_mat_probs,axis=3)[filter_mat_boxes[0],filter_mat_boxes[1],filter_mat_boxes[2]] 
+	classes_num_filtered = np.argmax(probs,axis=3)[filter_mat_boxes[0],filter_mat_boxes[1],filter_mat_boxes[2]]
 
 	argsort = np.array(np.argsort(probs_filtered))[::-1]
 	boxes_filtered = boxes_filtered[argsort]
@@ -142,7 +139,6 @@ def main(argv):
 	inputs = img
 	transformer = caffe.io.Transformer({'data': net.blobs['data'].data.shape})
 	transformer.set_transpose('data', (2,0,1))
-	transformer.set_channel_swap('data', (2,1,0))
 	start = datetime.now()
 	out = net.forward_all(data=np.asarray([transformer.preprocess('data', inputs)]))
 	end = datetime.now()
